@@ -9,32 +9,25 @@
   --bg-color: #fcfcfc;
   --primary-color: #4756df;
   --secondary-color: #ff7235;
-  --primary-shadow: #8b9eaf;
+  --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
 }
-/* Variables end*/
+/* Variables end */
 
 html {
   scroll-behavior: smooth;
 }
 
-/* CSS resets */
+/* CSS Resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-/* wave effect */
-.wave-effect {
-  font-size: 3em;
-  letter-spacing: 1px;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  /* border: 2px solid red; */
 }
 
 ul {
@@ -51,10 +44,17 @@ a:hover {
 }
 
 body {
-  background-image: url(assets/bg.svg);
   font-family: var(--font-family);
 }
 
+section {
+  /* max-width: 1100px;
+  margin: auto; */
+}
+
+/* CSS Resets end */
+
+/* Navbar */
 nav {
   position: sticky;
   top: 0;
@@ -71,6 +71,7 @@ nav {
 nav h1 {
   color: var(--primary-color);
 }
+
 nav a {
   color: var(--primary-color);
   transition: var(--transition);
@@ -84,6 +85,7 @@ nav ul {
   display: flex;
   gap: 1.9rem;
 }
+
 nav ul li {
   font-weight: var(--bold-font);
 }
@@ -96,7 +98,9 @@ nav ul li {
   cursor: pointer;
   display: none;
 }
+/* Navbar ends */
 
+/* Hero section */
 .hero {
   display: flex;
   align-items: center;
@@ -112,7 +116,6 @@ nav ul li {
 }
 
 .bio {
-  background: var(--primary-color);
   width: 25rem;
   padding: 0.625rem;
   border-radius: 6px;
@@ -127,20 +130,26 @@ nav ul li {
   line-height: var(--line-height);
   padding: 0.3rem 0;
 }
+/* Hero section ends */
 
+/* More about */
 .more-about {
   background-color: var(--bg-color);
   padding: 1rem 6rem;
 }
+
 .more-about h2 {
   margin-bottom: var(--bottom-margin);
   text-align: center;
 }
+
 .more-about p {
   line-height: var(--line-height);
   padding: 0.4rem;
 }
+/* More about ends */
 
+/* Skills section */
 .skills {
   max-width: 68.75rem;
   margin: auto;
@@ -151,24 +160,18 @@ nav ul li {
 .skill-header {
   margin-bottom: 1rem;
 }
+
 .skills-wrapper img {
   padding: 1.25rem;
 }
+
 .icon {
   width: 11.875rem;
   height: 11.25rem;
 }
-.icon {
-  width: 11.875rem;
-  height: 11.25rem;
-}
-.icon-card {
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--secondary-shadow);
-  padding: 20px;
-  margin: 10px;
-}
+/* Skills section ends */
+
+/* Projects section */
 .projects {
   background-color: var(--bg-color);
   padding: 32px 0;
@@ -185,6 +188,7 @@ nav ul li {
   align-items: center;
   justify-content: center;
 }
+
 .projects-title {
   text-align: center;
   margin-bottom: 1rem;
@@ -195,6 +199,7 @@ nav ul li {
   width: 21.875rem;
   padding: 1rem;
 }
+
 .project-container p {
   padding: 0.4rem;
 }
@@ -207,21 +212,18 @@ nav ul li {
   margin-bottom: var(--bottom-margin);
 }
 
-.project-card {
-  background-color: #fff;
-  border-radius: 11px;
-  box-shadow: 0 3px 10px var(--primary-shadow);
-  padding: 20px;
-  margin: 10px;
-}
+/* Projects section ends */
 
+/* Contacts section */
 .contact {
   margin-top: 2rem;
 }
+
 .contact h2 {
   text-align: center;
   margin-bottom: var(--bottom-margin-2);
 }
+
 .contact-form-container {
   max-width: 40.75rem;
   margin: 0 auto;
@@ -229,25 +231,29 @@ nav ul li {
   border-radius: 5px;
   box-shadow: 0 3px 10px var(--secondary-shadow);
 }
+
 .contact-form-container label {
-  line-height: 2.7rem;
+  line-height: 2.7em;
   font-weight: var(--bold-font);
   color: var(--primary-color);
 }
+
 .contact-form-container textarea {
   min-height: 6.25rem;
   font-size: 14px;
 }
+
 .contact-form-container .input-field {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: none;
-  padding: 8px;
   border: 2px outset var(--primary-color);
+  font-size: 0.875rem;
   outline: none;
 }
+
 .input-field::placeholder {
   padding: 0.5rem;
   color: var(--primary-color);
@@ -259,17 +265,20 @@ nav ul li {
   margin: 10px 0;
   background-color: #fff;
   border: 2px solid var(--primary-color);
-  border-radius: 5rem;
+  border-radius: 5px;
   font-size: 1rem;
   font-weight: var(--bold-font);
   transition: var(--transition);
 }
+
 .submit-btn:hover {
   background-color: var(--primary-color);
   border: 2px solid var(--primary-color);
   cursor: pointer;
 }
+/* Contacts section ends */
 
+/* Social buttons */
 .socials {
   display: flex;
   flex-direction: column;
@@ -277,18 +286,14 @@ nav ul li {
   right: 1%;
   bottom: 50%;
 }
+
 .socicon {
   width: 2rem;
   height: 2rem;
 }
+/* Social button ends */
 
-footer {
-  background-color: var(--bg-color);
-  padding: 1.25rem;
-  text-align: center;
-  margin: 2rem 0 0;
-}
-
+/* Scroll to top button */
 .scroll-up {
   position: fixed;
   right: 0.5%;
@@ -299,6 +304,33 @@ footer {
 .up-arrow {
   width: 3rem;
   height: 3rem;
+}
+/* Scroll to top button ends */
+
+/* Footer section */
+footer {
+  background-color: var(--bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+/* Footer section ends */
+
+/* General (utilities) */
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
 }
 
 /* Media queries for responsiveness */
